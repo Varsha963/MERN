@@ -28,7 +28,7 @@ div > p{
     color:chartreuse;
 }
 /*Attribute Selector*/
-input [type="text"]{
+input[type="text"]{
     color:green;
 }
 /*Adjacent color*/
