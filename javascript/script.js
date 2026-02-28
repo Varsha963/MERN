@@ -319,7 +319,7 @@ var a=10;
  /* var a=20; // Global scope
  if(true)
  {
-    var b=10;//Block scope is not applicable 
+    var b=10;//Block scope is not applicable,it will come if we declare in variable in block scope
  }
  console.log(a);
  console.log(b); */
@@ -333,9 +333,9 @@ var a=10;
 console.log(a);
 console.log(b);
  */
-const a=10;
+/* const a=10;
  if(true){
      const b=20;
  }
 console.log(a);
-console.log(b);
+console.log(b); */

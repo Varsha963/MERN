@@ -5,6 +5,42 @@
     <link rel="icon" href="../assets/image.png">
 </head>
 <body>
-    <script src="./script.js"></script>
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <div class="para1">varshinii.</div>
+    <ul id="list">
+
+    </ul>
+    <button id="btn">click</button>
+    <script>
+       /*  document.getElementById("para").textContent="Hello World"//returns all text ignores css
+        //dom is used to access text,elements,styles it is a bridge between html and programming languages javascript.
+        // dom means document object model it is a programming interface(api) for wewb documents representing html or xml as structured tree of nodes,allowing languages like 
+        //javascript to create,changeor remove content and structure
+        document.getElementById("para").innerText="varsha"
+        document.getElementsByClassName("para1")[0].innerText="hello world"//respects css if display is none it ignores returns only visible content
+        document.getElementById("para").innerHTML="<p> varsha is btech girl </p>"//allows adding html tags
+        //anopther method is query selector
+         */
+
+         /* var para1=document.getElementsByClassName("para1")[0];
+         console.log(para1);
+         var para=document.getElementById("para");
+         console.log(para);
+         para.style.color="red";
+         para.style.backgroundColor="green";
+         para.style.fontSize="20px"; */
+
+         //creating element in js memory and appending it into dom
+         /* const li=document.createElement('li');
+         li.innerText="New li element";
+         document.getElementById("list").append(li); */
+
+         const btn=document.getElementById("btn");
+         btn.addEventListener("click",function(){
+            const li=document.createElement('li');
+            li.innerText="New li element";
+            document.getElementById("list").append(li);
+         })
+    </script>
 </body>
 </html>
