@@ -1,0 +1,134 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+/* BODY */
+body{
+  background:#0f172a;
+  color:white;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 60px;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  color:#38bdf8;
+}
+
+nav a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 60px;
+  text-align:center;
+}
+
+/* ABOUT */
+.about-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.about-text{
+  max-width:500px;
+  text-align:left;
+}
+
+.hero-img img{
+  width:250px;
+  border-radius:50%;
+  border:4px solid #38bdf8;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:30px;
+}
+
+.box{
+  background:#1e293b;
+  padding:12px 22px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.box:hover{
+  background:#38bdf8;
+  color:black;
+  transform:scale(1.05);
+}
+
+/* PROJECTS */
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  width:260px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#38bdf8;
+  color:black;
+}
+
+/* CONTACT */
+#contact p{
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  .section{
+    padding:60px 20px;
+  }
+
+  .about-text{
+    text-align:center;
+  }
+}
