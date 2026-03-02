@@ -236,7 +236,7 @@ add(10,20,(res)=>{
         if(i%2==0){
             console.log(i);
         }
-  
+
     }
 })  */
 //* /spread operator(es6)
@@ -261,7 +261,7 @@ var{name,age,dept,contact} = {
 }
 console.log(contact);
 //for in(indexes it will show)(ES6)
-var arr=[10,20,30,40];// 
+var arr=[10,20,30,40];//
 for(let i in arr){
     console.log(i,arr[i]);
 }
@@ -274,7 +274,7 @@ var obj={
 for(let key in obj)
 {
     console.log(key,obj[key]);
-} 
+}
 
 // for of(ES6)
 var arr=[10,20,30,40]
@@ -298,7 +298,7 @@ console.log(even);
 
 // reducer
 var total=arr.reduce((sum,val)=>(sum+val),0)
-console.log(total); 
+console.log(total);
 
 result=arr.map((val)=>val**2).filter((val)=>val%2==0).reduce((sum,val)=>(sum+val),0);
 console.log(result); */
@@ -314,28 +314,108 @@ var a=10;
  } */
 
 
- //scope
+//scope
 // for var
- /* var a=20; // Global scope
- if(true)
- {
-    var b=10;//Block scope is not applicable,it will come if we declare in variable in block scope
- }
- console.log(a);
- console.log(b); */
+/* var a=20; // Global scope
+if(true)
+{
+   var b=10;//Block scope is not applicable,it will come if we declare in variable in block scope
+}
+console.log(a);
+console.log(b); */
 
- //Block space
+//Block space
 
- /* let a=10;
- if(true){
-    let b=20;
- }
+/* let a=10;
+if(true){
+   let b=20;
+}
 console.log(a);
 console.log(b);
- */
+*/
 /* const a=10;
  if(true){
      const b=20;
  }
 console.log(a);
 console.log(b); */
+
+//promise(ES6)
+/* const promise=new Promise((resolve,reject)=>{
+    var success=true;
+if(success){
+    resolve("Task Completed");
+}
+else{
+    reject("Task not completed");
+}
+})
+promise.then((message)=>{
+console.log(message);
+}).catch((err)=>{
+console.log(err);
+}) */
+
+//setTimeout
+/* const promise =new Promise((resolve,reject)=>{
+    var success=true;
+    if(success){
+        setTimeout(()=>{
+            resolve("Task Completed");
+        },2000);
+    }
+    else{
+        reject("Task not Completed");
+    }
+})
+promise.then((msg)=>console.log(msg))
+.catch((err)=>console.log(err)); */
+
+//setTimeout
+/* const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        var success = true;
+        if (success) {
+            resolve("Task Completed");
+        }
+        else {
+            reject("Task not completed");
+        }
+    },5000);
+});
+promise.then((msg)=>console.log(msg))
+.catch((err)=>console.log(err));  */
+
+
+//setInterval
+/* var count=1
+const IntervalCount=setInterval(()=>{
+    console.log(count);
+    count++;
+    if(count>5){
+        clearInterval(IntervalCount);
+    }
+},2000);
+ */
+
+//fetch
+/* const getData=()=>{
+    return fetch("https://jsonplaceholder.typicode.com/users")
+}
+getData().then((res)=>res.json())
+.then((data)=>console.log(data))
+.catch((err)=>console.log(err)); */
+
+//async and await
+ const getData=async()=>{
+    try{
+        const res=await fetch("https://jsonplaceholder.typicode.com/users");
+        const data=await res.json();
+        console.log(data);
+
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+getData();
